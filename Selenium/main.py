@@ -1,12 +1,12 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+# -*- coding: utf-8 -*-
 
-driver = webdriver.PhantomJS(executable_path='F:/python-code/phantomjs-2.1.1-windows/bin/phantomjs')
-driver.get("http://pythonscraping.com/pages/javascript/ajaxDemo.html")
-try:
-    element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "loadedButton")))
-finally:
-    print(driver.find_element_by_id("content").text)
-    driver.close()
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+driver = webdriver.Chrome()
+driver.get("http://www.baidu.com")
+elem = driver.find_element_by_id("kw")
+elem.send_keys("Python")
+driver.find_element_by_id("su").click()
+# elem.send_keys(Keys.RETURN)
+print driver.page_source
