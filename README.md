@@ -9,7 +9,7 @@ Selenium => 解析动态页面
 
 Pandas => Pandas数据分析  
 
-Matplotlib => Matplotlib画折线图  
+Matplotlib => Matplotlib数据可视化  
 
 Scrapy => Scrapy爬虫  
 
