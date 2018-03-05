@@ -47,7 +47,7 @@ print(rrr)
 now_rrr = rrr.ix[:, ['now']]
 print(now_rrr)
 
-ax2.plot(now_rrr.now, c='g', label=u'当前准备金率')
+ax2.plot(now_rrr.now, c='g', label=u'准备金率')
 ax2.set_ylabel(u'准备金率(%)')
 ax2.grid(axis='y')
 
